@@ -2,7 +2,7 @@
 #include <ctype.h> // toupper ; isalpha
 #include <stdbool.h> //true;false
 
-int occurences1[26];occurences2[26];
+int occurences1[26];int occurences2[26];
 void scan_word(int occurence[26]){   /* function declaration involves counting of occurences and storing in occurence array */
     char c;
 
@@ -21,7 +21,7 @@ void scan_word(int occurence[26]){   /* function declaration involves counting o
     printf("\nEnter second word: "); //prompts user to enter the second word
     while ((c = getchar()) != '\n'){ // converts lowercase to uppercase
         if (isalpha(c)){
-            occurence[toupper(c) - 'A']++;
+            occurence[toupper(c) - 'A']--;
             occurences2[toupper(c) - 'A'] = occurence[toupper(c) - 'A'];
 
         }
